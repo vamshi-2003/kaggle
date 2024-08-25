@@ -2,7 +2,7 @@ debug: False
 overwrite: False # overwrite outputs of last run if run_id was not changed
 ndim: 3
 run_id: tumor
-out_dir: output
+out_dir: /kaggle/working/output
 model_dir: models
 log_dir: logs
 seed: 42
