@@ -3,8 +3,8 @@ overwrite: False # overwrite outputs of last run if run_id was not changed
 ndim: 3
 run_id: tumor
 out_dir: /kaggle/working/output
-model_dir: models
-log_dir: logs
+model_dir: /kaggle/working/models
+log_dir: /kaggle/working/logs
 seed: 42
 device: 'cuda:1'
 data:
@@ -19,7 +19,7 @@ data:
   valid: True
   test: False
   dataset_type: persistent
-  cache_dir: /tmp/monai-cache
+  cache_dir: /kaggle/working/tmp/monai-cache
   batch_size: 1
 transforms:
   # apply multiple transforms to the input. Comment out if a transform should not be applied
@@ -108,5 +108,5 @@ loss:
     softmax: True
     to_onehot_y: True
 training:
-  max_epochs: 500
+  max_epochs: 50
   early_stopping_patience: 1000
